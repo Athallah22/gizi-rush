@@ -1,6 +1,6 @@
 # Gizi Rush
 
-Game show edukasi gizi untuk siswa SMP: satu laptop + proyektor, tanpa HP siswa, berjalan offline penuh. Fasilitator mengendalikan permainan, kelompok berdiskusi dan menjawab bersama.
+Game show edukasi gizi.
 
 ![Preview Gizi Rush](./public/UI.png)
 
