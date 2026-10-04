@@ -78,7 +78,8 @@ GameState
 ├── teams (dinamis 2–6)
 ├── plate
 ├── revealState
-└── completed (level tertinggi reveal per sesi)
+├── completed (level tertinggi reveal per sesi)
+└── quizSeed (seed acak soal per sesi)
 ```
 
 Contoh:
@@ -92,6 +93,7 @@ type GameState = {
   plate: string[];
   revealState: boolean;
   completed: Partial<Record<RoundType, number>>;
+  quizSeed: Partial<Record<RoundType, number>>;
 };
 ```
 
@@ -210,7 +212,7 @@ gizi-rush/
 │
 ├── public/
 │   ├── images/
-│   │   ├── food/*.svg (pack lokal AI-generate, offline)
+│   │   ├── food/*.svg (27 pack lokal AI-generate, offline)
 │   │   └── maskot-gizi.svg
 │   ├── icons/
 │   └── sounds/ (tidak dipakai, sound = synth WebAudio)
@@ -229,8 +231,9 @@ gizi-rush/
 │   │
 │   ├── features/
 │   │   └── game/
-│   │       ├── useGame.ts (addScoreMany/undoLast/addTeam/removeTeam/markDone/goMenu)
+│   │       ├── useGame.ts (addScoreMany/undoLast/addTeam/removeTeam/markDone/goMenu/reshuffle)
 │   │       ├── sessions.ts (gating 🔒/⭐/✅)
+│   │       ├── quizPool.ts (pick5 acak 1 per level, seeded)
 │   │       ├── scoring.ts (missionScore + MAX_ITEMS)
 │   │       └── scoring.check.ts
 │   │
@@ -375,7 +378,14 @@ Game Logic
      ├───────────────┐
      ▼               ▼
 Question JSON     Food JSON (susun-piring.json, drag murni)
+(10/sesi)        (27 makanan + 5 misi)
+     │               │
+     ▼               ▼
+pick5(pool,      pool 6–8/misi
+quizSeed)        (wajib + jebakan)
 ```
+
+Bank kuis 10 soal/sesi dipilih acak 1 per level (`quizPool.pick5`, seed per sesi di `quizSeed`, tombol `🔀 Acak soal` + helper `reshuffle`).
 
 Contoh `susun-piring.json`:
 

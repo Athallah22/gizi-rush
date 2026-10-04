@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import type { GameState, Team } from "../../types/game";
+import type { GameState, RoundType, Team } from "../../types/game";
 
 const KEY = "gizi-rush-session";
 const TEAM_ICONS = ["🍎", "🥕", "🥑", "🍌", "🍇", "🍉"];
 const TEAM_NAMES = ["Apel", "Wortel", "Alpukat", "Pisang"];
 
 const DEFAULT_TEAMS: Team[] = TEAM_NAMES.map((name, i) => ({ id: `t${i + 1}`, name, icon: TEAM_ICONS[i], score: 0 }));
+
+const freshSeed = () => Date.now() + Math.floor(Math.random() * 100000);
 
 const INIT: GameState = {
   status: "setup",
@@ -15,6 +17,7 @@ const INIT: GameState = {
   plate: [],
   revealState: false,
   completed: {},
+  quizSeed: {},
 };
 
 export function useGame() {
@@ -24,7 +27,7 @@ export function useGame() {
       const raw = localStorage.getItem(KEY);
       if (!raw) return INIT;
       const parsed = JSON.parse(raw) as Partial<GameState>;
-      return { ...INIT, ...parsed, completed: { ...(parsed.completed ?? {}) } };
+      return { ...INIT, ...parsed, completed: { ...(parsed.completed ?? {}) }, quizSeed: { ...(parsed.quizSeed ?? {}) } };
     } catch {
       return INIT;
     }
@@ -42,8 +45,10 @@ export function useGame() {
   const setPlate = (plate: string[]) => patch({ plate });
   const resetGame = () => {
     setLastAward(null);
-    patch({ ...INIT, teams: state.teams.map((t) => ({ ...t, score: 0 })), completed: {} });
+    patch({ ...INIT, teams: state.teams.map((t) => ({ ...t, score: 0 })), completed: {}, quizSeed: {} });
   };
+  const reshuffle = (round: RoundType) =>
+    patch({ quizSeed: { ...state.quizSeed, [round]: freshSeed() } });
   const addTeam = (name: string) => {
     if (state.teams.length >= 6) return;
     const i = state.teams.length;
@@ -68,5 +73,5 @@ export function useGame() {
     patch({ completed: { ...state.completed, [state.currentRound]: Math.max(state.completed[state.currentRound] ?? 0, level) } });
   const goMenu = () => patch({ status: "menu", revealState: false });
 
-  return { state, patch, addScoreMany, undoLast, hasUndo: lastAward !== null, setPlate, resetGame, addTeam, removeTeam, markDone, goMenu };
+  return { state, patch, addScoreMany, undoLast, hasUndo: lastAward !== null, setPlate, resetGame, addTeam, removeTeam, markDone, goMenu, reshuffle };
 }

@@ -252,6 +252,10 @@ TRAY: 🍚 🍗 🥬 🍎 🍟 🧋 🍳
         └──────────────┘
 ```
 
+Bank makanan: 27 item (3 pokok, 5 lauk, 1 sayur, 5 buah, 2 susu, 11 junk) dengan angka gizi acuan TKPI/USDA — wajib review ahli gizi sebelum sesi resmi.
+
+Tiap misi memakai pool 6–8 item (makanan wajib + 2–3 jebakan junk), mis. L4: nasi, daging-sapi, sayur, mangga + kentang-goreng, boba, soda, kerupuk.
+
 Peserta berdiskusi, ahli gizi drag gambar makanan dari tray ke piring memakai kursor.
 
 Aturan drag murni:
@@ -460,16 +464,19 @@ Versi awal tidak membutuhkan CMS.
 
 Pertanyaan dan makanan disimpan dalam file JSON.
 
+Bank soal kuis: 10 soal per sesi (2 soal per level 1–5), 5 yang tampil dipilih acak 1 per level via `pick5(pool, quizSeed)` sehingga tiap buka sesi susunannya bisa berganti. `quizSeed` per sesi tersimpan di state (konsisten saat lanjut + refresh); tombol `🔀 Acak soal` di kartu sesi mengganti susunan.
+
 Contoh mitos/fakta:
 
 ```json
 {
   "id": "mf-001",
-  "category": "mitos_fakta",
-  "statement": "Contoh pernyataan gizi",
-  "answer": true,
-  "explanation": "Penjelasan singkat...",
-  "points": 100
+  "type": "mitos_fakta",
+  "question": "Sarapan dapat membantu memenuhi kebutuhan energi...",
+  "answer": "fakta",
+  "explanation": "Sarapan bisa jadi kesempatan memenuhi kebutuhan energi...",
+  "points": 100,
+  "level": 1
 }
 ```
 

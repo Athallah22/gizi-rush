@@ -9,6 +9,7 @@ import Tutorial from "./components/Tutorial";
 import SusunPiring from "./rounds/SusunPiring/SusunPiring";
 import { useGame } from "./features/game/useGame";
 import { SESSION_ORDER, completedLevel, isUnlocked } from "./features/game/sessions";
+import { pick5, type QuizRound } from "./features/game/quizPool";
 import mitos from "./data/mitos-fakta.json";
 import battle from "./data/food-battle.json";
 import gvs from "./data/guru-vs-siswa.json";
@@ -24,15 +25,21 @@ const LABEL: Record<RoundType, string> = {
   final: "🔥 Final",
 };
 
-const QS: Record<Exclude<RoundType, "susun_piring">, Question[]> = {
-  mitos_fakta: [...(mitos as Question[])].sort((a, b) => a.level - b.level),
-  food_battle: [...(battle as Question[])].sort((a, b) => a.level - b.level),
-  guru_vs_siswa: [...(gvs as Question[])].sort((a, b) => a.level - b.level),
-  final: [...(finalQs as Question[])].sort((a, b) => a.level - b.level),
+const POOL: Record<QuizRound, Question[]> = {
+  mitos_fakta: mitos as Question[],
+  food_battle: battle as Question[],
+  guru_vs_siswa: gvs as Question[],
+  final: finalQs as Question[],
 };
 
 export default function App() {
-  const { state, patch, addScoreMany, undoLast, hasUndo, setPlate, resetGame, addTeam, removeTeam, markDone, goMenu } = useGame();
+  const { state, patch, addScoreMany, undoLast, hasUndo, setPlate, resetGame, addTeam, removeTeam, markDone, goMenu, reshuffle } = useGame();
+  const QS: Record<QuizRound, Question[]> = {
+    mitos_fakta: pick5(POOL.mitos_fakta, state.quizSeed.mitos_fakta ?? 1),
+    food_battle: pick5(POOL.food_battle, state.quizSeed.food_battle ?? 2),
+    guru_vs_siswa: pick5(POOL.guru_vs_siswa, state.quizSeed.guru_vs_siswa ?? 3),
+    final: pick5(POOL.final, state.quizSeed.final ?? 4),
+  };
   const [showBoard, setShowBoard] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [pending, setPending] = useState<RoundType | null>(null);
@@ -200,7 +207,7 @@ export default function App() {
           </div>
         </header>
         <div className="mx-auto w-full max-w-6xl flex-1">
-          {showBoard ? <Leaderboard teams={state.teams} /> : <SessionMenu state={state} onOpen={openSession} />}
+          {showBoard ? <Leaderboard teams={state.teams} /> : <SessionMenu state={state} onOpen={openSession} onShuffle={reshuffle} />}
         </div>
         <footer className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-black/70 backdrop-blur">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-4 py-2">

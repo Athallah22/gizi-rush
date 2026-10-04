@@ -67,4 +67,5 @@ export type GameState = {
   plate: string[];
   revealState: boolean;
   completed: Partial<Record<RoundType, number>>;
+  quizSeed: Partial<Record<RoundType, number>>;
 };

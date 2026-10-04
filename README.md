@@ -13,8 +13,9 @@ Acuan desain: `docs/PRD.md`, `docs/Design.md`, `docs/Architecture.md`.
 ## Fitur Utama
 
 - Menu 5 sesi berurutan dengan sistem kunci (`🔒`/`⭐`/`✅`), tiap sesi 5 level
+- Bank 10 soal per sesi kuis (2 per level), 5 yang tampil dipilih acak 1 per level — tiap buka sesi susunannya bisa berganti; tombol `🔀 Acak soal` di kartu sesi
 - 5 sesi: Mitos/Fakta (+100), Susun Piring drag-and-drop (0–250), Food Battle (+150), Guru vs Siswa (+200), Final Rush (+500)
-- Susun Piring: 5 misi 4 Sehat 5 Sempurna + total nilai gizi live (kkal, protein, karbo, lemak, serat, gula) vs target misi
+- Susun Piring: 27 makanan (pool 6–8 per misi berisi jebakan), 5 misi 4 Sehat 5 Sempurna + total nilai gizi live (kkal, protein, karbo, lemak, serat, gula) vs target misi; angka gizi acuan TKPI/USDA, wajib review ahli gizi
 - Skor multi-tim sekali klik: tap chips tim yang benar, 1 klik award, ada `↩ Undo` anti salah tap
 - Countdown 3-2-1-GO setiap buka sesi, confetti juara, sound effect synth lokal + mute
 - Kontrol keyboard penuh untuk fasilitator (lihat [Kontrol](#-kontrol-fasilitator))
@@ -77,9 +78,8 @@ Gizi-Game/
 ├── src/
 │   ├── components/               # Quiz, TeamPicker, SessionMenu, Leaderboard, Countdown, Confetti
 │   ├── rounds/SusunPiring/       # SusunPiring.tsx, Plate.tsx, DraggableFood.tsx
-│   ├── features/game/            # useGame.ts, sessions.ts, scoring.ts, scoring.check.ts
-│   ├── data/                     # mitos-fakta.json, food-battle.json, guru-vs-siswa.json,
-│   │                             # final.json, susun-piring.json (makanan + misi + target gizi)
+│   ├── features/game/            # useGame.ts, sessions.ts, quizPool.ts, scoring.ts, scoring.check.ts
+│   ├── data/                     # 4× kuis 10 soal, susun-piring.json (27 makanan + 5 misi + target gizi)
 │   ├── utils/                    # sound.ts (synth WebAudio), useAwardKeys.ts
 │   ├── types/game.ts
 │   ├── App.tsx                   # setup → menu sesi → main → result

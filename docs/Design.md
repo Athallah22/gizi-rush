@@ -356,7 +356,7 @@ Jawaban muncul via suspense 😱 → pop `💥 JAWABAN! +POIN` + penjelasan + ch
 └────────────────────────────────────────────┘
 ```
 
-tray → drag → piring = masuk (maks 6), piring → drag → tray = keluar. Bintang misi naik otomatis saat `✅` pertama; tombol skor untuk parsial.
+tray → drag → piring = masuk (maks 6), piring → drag → tray = keluar. Bank 27 makanan (pool 6–8 per misi: wajib + 2–3 jebakan). Bintang misi naik otomatis saat `✅` pertama; tombol skor untuk parsial. Angka gizi acuan TKPI/USDA — wajib review ahli gizi.
 
 ---
 
