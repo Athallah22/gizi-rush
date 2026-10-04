@@ -219,11 +219,13 @@ gizi-rush/
 │   │
 │   ├── components/
 │   │   ├── Leaderboard/
-│   │   ├── Countdown/ (tiap buka sesi, Esc batal)
+│   │   ├── Countdown/ (tiap buka sesi baru, Esc batal)
 │   │   ├── Confetti/ (CSS-only)
 │   │   ├── Quiz/
 │   │   ├── TeamPicker/ (chips multi-tim + award + undo)
-│   │   └── SessionMenu/
+│   │   ├── SessionMenu/ (layout 3-2-1 + badge Lanjut)
+│   │   ├── ControlsHelp/ (overlay semua kontrol, ?/H)
+│   │   └── Tutorial/ (6 langkah, flag gizi-rush-seen-tutorial)
 │   │
 │   ├── features/
 │   │   └── game/
@@ -270,19 +272,20 @@ gizi-rush/
 # 8. Application Flow
 
 ```text
-Setup (nama tim 2–6)
+Setup (nama tim 2–6 + tutorial pertama buka, flag gizi-rush-seen-tutorial)
   │
   ▼
-Menu (5 kartu 🔒/⭐/✅)
-  │  └─ klik sesi → Countdown (Esc batal) →
+Menu (3 kartu atas, 2 kartu tengah, Result bawah; badge Lanjut Lx)
+  │  └─ klik sesi baru → Countdown (Esc batal) →
+  │  └─ klik sesi berprogres → langsung lanjut level tersimpan →
   ▼
-Playing (Level 1–5 per sesi, Space = Menu)
+Playing (Level 1–5 per sesi, Space = Menu tanpa reset progres)
   │
   ▼
 Finished (semua sesi ⭐⭐⭐⭐⭐ → confetti + juara)
   │
   ▼
-Reset (skor + completed nol, nama tim dipertahankan)
+Reset via Esc (skor + completed nol, nama tim dipertahankan)
 ```
 
 ---
@@ -291,8 +294,8 @@ Reset (skor + completed nol, nama tim dipertahankan)
 
 Game engine (`useGame` + `sessions` + `scoring`, tanpa class) bertanggung jawab terhadap:
 
-- pindah sesi/soal/misi (maju/mundur, Space = Menu);
-- countdown tiap buka sesi (`pending`, Esc batal);
+- pindah sesi/soal/misi (maju/mundur, Space = Menu tanpa reset progres; buka ulang lanjut dari `completed`);
+- countdown tiap buka sesi baru (`pending`, Esc batal);
 - reveal toggle + auto-bintang (`markDone`);
 - skor multi-tim 1-klik + Undo (`addScoreMany` / `undoLast`);
 - leaderboard + tim dinamis (`addTeam` / `removeTeam`);

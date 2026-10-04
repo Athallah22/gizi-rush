@@ -2,7 +2,11 @@
 
 Game show edukasi gizi untuk siswa SMP: satu laptop + proyektor, tanpa HP siswa, berjalan offline penuh. Fasilitator mengendalikan permainan, kelompok berdiskusi dan menjawab bersama.
 
-> Preview UI: jalankan `npm run dev` lalu buka alamat lokal yang tampil di terminal (default Vite `http://localhost:5173`). Link demo publik diisi setelah deploy ke Vercel (lihat [Deploy ke Vercel](#-deploy-ke-vercel)).
+![Preview Gizi Rush](./public/UI.png)
+
+🔗 **Demo:** https://gizi-rush.vercel.app/
+
+> Lokal: jalankan `npm run dev` lalu buka alamat yang tampil di terminal (default Vite `http://localhost:5173`).
 
 Acuan desain: `docs/PRD.md`, `docs/Design.md`, `docs/Architecture.md`.
 

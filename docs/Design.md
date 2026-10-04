@@ -208,19 +208,22 @@ Yang terlihat jelas:
 Kontrol fasilitator berupa dock `fixed bottom-0` kompak agar konten game penuh di layar:
 
 ```text
-[⬅️ Misi/Soal (←)] [💥 Reveal (R)] [(→) Misi/Soal] [🏆 Board (Tab)] [🏠 Menu (Space)] [Reset]
+[⬅️ Misi/Soal (←)] [💥 Reveal (R)] [(→) Misi/Soal] [🏆 Board (Tab)] [🏠 Menu (Space)] [Reset (Esc)] [?]
 ```
 
-R = toggle reveal ↔ hide, Tab = toggle board. Header menampilkan `Level x/5`. Picker skor: chips multi-tim + `Semua` + 1 tombol award + Undo. Sisa terbaik: `S` award skor, `M` mute, `Esc` tutup Board.
+R = toggle reveal ↔ hide, Tab = toggle board. Header menampilkan `Level x/5` + tombol `?` semua kontrol. Picker skor: chips multi-tim + `Semua` + 1 tombol award + Undo. `Esc` = Reset game (tanpa confirm; tutup help/board/pending dulu bila terbuka).
 
-Menu sesi: 5 kartu berurutan dengan 🔒/⭐/✅ + progress bar; klik terkunci = shake.
+Menu sesi: 3 kartu di baris atas, 2 kartu di baris tengah, Result full-width paling bawah; tiap kartu 🔒/⭐/✅ + progress bar + badge `Lanjut Lx ▶️` bila progres tersimpan; klik terkunci = shake. Keluar via Space aman: klik kartu yang sama otomatis lanjut dari level tersimpan (bintang 3 → Level 4).
 
 Shortcut keyboard adalah kontrol utama:
 
 ```text
 → → Misi/Soal berikut, ← → Misi/Soal sebelumnya,
 R → toggle Reveal/Hide, Tab → toggle Board,
-Space → kembali Menu, M → mute, 1-6 → toggle chips tim (dalam Quiz/Piring), Esc → tutup Board / batalkan countdown sesi
+Space → kembali Menu (posisi tersimpan), M → mute,
+1-6 → toggle chips tim (dalam Quiz/Piring),
+S → kasih skor (dalam Quiz/Piring),
+? / H → bantuan semua kontrol, Esc → Reset game
 ```
 
 Idealnya kontrol operator tidak mengganggu tampilan utama.
@@ -238,11 +241,14 @@ Idealnya kontrol operator tidak mengganggu tampilan utama.
 │                                     │
 │  Nama Kelompok (2–6, bebas, underline menyatu) │
 │                                     │
+│  Tutorial otomatis saat pertama buka│
+│  (? buka ulang, [Lewati semua])     │
+│                                     │
 │  🍎  Apel        ×                  │
 │  ─────────────────                  │
 │  🥕  Wortel      ×                  │
 │  ─────────────────                  │
-│       [+ Tambah Kelompok]            │
+│                 + Tambah kelompok   │
 │                                     │
 │          [ MULAI GAME ]             │
 │                                     │
@@ -447,7 +453,7 @@ Primary controls (dock bawah):
 
 ```text
 [⬅️ Misi/Soal (←)] [💥 Reveal (R)] [(→) Misi/Soal]
-[🏆 Board (Tab)] [🏠 Menu (Space)] [Reset]
+[🏆 Board (Tab)] [🏠 Menu (Space)] [Reset (Esc)] [?]
 ```
 
 Jangan membuat fasilitator harus membuka menu yang dalam.
@@ -463,9 +469,11 @@ Kontrol final (terbaik, tanpa H/N/P/L):
 ← → Misi/Soal sebelumnya
 R → toggle Reveal/Hide
 Tab → toggle Board
-Space → kembali Menu sesi
+Space → kembali Menu sesi (posisi tersimpan)
 S → kasih skor ke tim terpilih (dalam Quiz/Piring)
-M → mute, 1-6 → toggle chips tim (dalam Quiz/Piring), Esc → tutup Board
+M → mute, 1-6 → toggle chips tim (dalam Quiz/Piring)
+? / H → bantuan semua kontrol
+Esc → Reset game (tutup help/board/pending dulu bila terbuka)
 ```
 
 ---

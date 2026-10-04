@@ -152,12 +152,13 @@ Fasilitator dapat:
 # 6. Struktur Permainan
 
 ```text
-SETUP → MENU SESI (5 kartu berurutan 🔒/⭐/✅)
-  → MAIN (tiap sesi 5 level) → Space = kembali Menu
+SETUP (tutorial 6 langkah saat pertama buka, bisa dilewati)
+  → MENU SESI (3 kartu atas, 2 kartu tengah, Result full-width bawah)
+  → MAIN (tiap sesi 5 level) → Space = kembali Menu (posisi tersimpan)
   → semua sesi ⭐⭐⭐⭐⭐ → RESULT
 ```
 
-Sesi kebuka berurutan; sesi berikut hanya jika sesi sebelumnya `completed >= 5`. Selesai per level = sudah reveal agar edukasi ahli gizi tersampaikan. Susun Piring: 5 misi 4S5S + nilai gizi live, piring auto-kosong tiap ganti misi.
+Sesi kebuka berurutan; sesi berikut hanya jika sesi sebelumnya `completed >= 5`. Selesai per level = sudah reveal agar edukasi ahli gizi tersampaikan. Keluar via Space aman: klik kartu yang sama otomatis lanjut dari level tersimpan (bintang 3 → Level 4). Susun Piring: 5 misi 4S5S + nilai gizi live, piring auto-kosong tiap ganti misi. `Esc` = Reset game (tutup help/board/countdown dulu bila terbuka). Tombol `?` membuka bantuan semua kontrol (`?`/`H`).
 
 ---
 
@@ -171,11 +172,11 @@ Membangun energi sebelum permainan dimulai.
 
 ### Alur
 
-1. Ahli gizi membuka aplikasi.
-2. Memasukkan nama kelompok (2–6, tambah/hapus bebas, input underline menyatu).
+1. Ahli gizi membuka aplikasi → tutorial 6 langkah (sambutan, menu sesi, level, reveal+skor, piring, keyboard) muncul saat pertama buka; bisa `[Lewati semua]`, dibuka ulang via tombol `?` di setup; status tersimpan di `localStorage gizi-rush-seen-tutorial`.
+2. Memasukkan nama kelompok (2–6, tambah/hapus bebas, input underline menyatu; tombol `+ Tambah kelompok` teks kecil rata kanan di bawah list).
 3. Menekan MULAI GAME langsung ke Menu Sesi (tanpa countdown).
-4. Countdown 3-2-1-GO muncul setiap kartu sesi dibuka (Esc membatalkan).
-5. Permainan dimulai di Level 1/5.
+4. Countdown 3-2-1-GO muncul setiap kartu sesi dibuka; klik kartu yang sudah berprogres langsung lanjut dari level tersimpan tanpa countdown ulang.
+5. Permainan dimulai dan bisa keluar-masuk sesi tanpa kehilangan progres.
 
 ### Contoh kelompok (dinamis 2–6, ikon 🍎🥕🥑🍌🍇🍉)
 
