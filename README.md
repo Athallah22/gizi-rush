@@ -124,17 +124,6 @@ Kelengkapan 100 + Kalori 50 + Protein 30 + Serat 20 + Gula 30 + Lemak 20
 
 Makanan `junk` menghukum otomatis lewat gula/lemak/kalori yang jebol + flag `⚠️`. Tiap misi punya target sendiri (L1–L4 empat sehat, L5 4 Sehat 5 Sempurna + susu).
 
-## ☁️ Deploy ke Vercel
-
-Static murni, tanpa server/rewrites, tanpa environment variable:
-
-1. Push repo ini ke GitHub.
-2. Di Vercel: **Add New → Project → Import** repo tersebut.
-3. Framework Preset: **Vite** (otomatis). Build Command `npm run build`, Output Directory `dist`.
-4. Deploy — selesai.
-
-Catatan: aplikasi perlu dibuka sekali dengan internet untuk mengunduh bundle awal; setelah termuat, permainan berjalan tanpa internet (refresh halaman memuat ulang dari server).
-
 ## 🔒 Keamanan
 
 - Tanpa backend, tanpa akun, tanpa data pribadi — tidak ada PII di `src/data/`.
@@ -144,6 +133,5 @@ Catatan: aplikasi perlu dibuka sekali dengan internet untuk mengunduh bundle awa
 
 ## 👥 Informasi Tambahan
 
-- Penulis / tim pengembang: *(isi di sini — mis. nama tim, sekolah, atau kontak fasilitator)*.
-- Dikembangkan sebagai media edukasi gizi untuk siswa SMP.
+- Dikembangkan sebagai media edukasi gizi.
 - Dokumen perancangan lengkap: `docs/PRD.md` (kebutuhan produk), `docs/Design.md` (UI/UX), `docs/Architecture.md` (arsitektur). 
