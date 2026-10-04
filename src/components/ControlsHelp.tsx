@@ -5,7 +5,7 @@ const GLOBAL: [string, string][] = [
   ["Space", "Kembali ke menu sesi (posisi tersimpan)"],
   ["M", "Mute / unmute"],
   ["Esc", "Reset game"],
-  ["?", "Buka / tutup bantuan ini"],
+  ["H", "Buka / tutup bantuan ini"],
 ];
 
 const CONTEXT: [string, string][] = [

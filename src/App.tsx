@@ -164,7 +164,7 @@ export default function App() {
         <button className="fixed right-4 top-4 rounded-full bg-white/15 px-3 py-1 text-lg font-bold" onClick={() => setTutorial(true)} title="Tutorial (?)">?</button>
         <img src="./images/maskot-gizi.svg" alt="Maskot Gizi Rush" className="animate-pop mx-auto h-40 w-40 drop-shadow-2xl" />
         <h1 className="title-glow text-7xl font-black text-yellow-300">🥗 GIZI RUSH!</h1>
-        <p className="text-2xl font-bold">🔥 SIAPA PALING JAGO GIZI? (SMP) 🔥</p>
+        <p className="text-2xl font-bold">🔥 SIAPA PALING JAGO GIZI? 🔥</p>
         <p className="text-xl font-bold text-neutral-200">Tulis nama kelompok, main dulu — skor belakangan!</p>
         <div className="mx-auto max-w-md space-y-1">
           {state.teams.map((t) => (
