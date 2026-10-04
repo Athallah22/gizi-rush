@@ -1,0 +1,7 @@
+[
+  { "id": "mf-001", "type": "mitos_fakta", "question": "Sarapan dapat membantu memenuhi kebutuhan energi untuk memulai aktivitas.", "answer": "fakta", "explanation": "Sarapan bisa jadi kesempatan memenuhi kebutuhan energi dan zat gizi sebelum aktivitas.", "points": 100, "level": 1 },
+  { "id": "mf-002", "type": "mitos_fakta", "question": "Minum air putih yang banyak bisa menggantikan kebutuhan makan.", "answer": "mitos", "explanation": "Air penting, tapi tidak menggantikan energi dan zat gizi dari makanan.", "points": 100, "level": 2 },
+  { "id": "mf-003", "type": "mitos_fakta", "question": "Semua makanan kemasan yang manis aman diminum setiap hari tanpa batas.", "answer": "mitos", "explanation": "Perhatikan kandungan gula dan frekuensi konsumsinya.", "points": 100, "level": 3 },
+  { "id": "mf-004", "type": "mitos_fakta", "question": "Melewatkan makan malam pasti bikin kurus dan selalu sehat.", "answer": "mitos", "explanation": "Yang penting total porsi dan pilihan makanan seharian, bukan melewatkan makan.", "points": 100, "level": 4 },
+  { "id": "mf-005", "type": "mitos_fakta", "question": "Buah dan sayur perlu dimakan setiap hari karena mengandung vitamin dan serat.", "answer": "fakta", "explanation": "Vitamin dan serat dari buah-sayur membantu tubuh tetap sehat.", "points": 100, "level": 5 }
+]

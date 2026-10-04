@@ -1,0 +1,7 @@
+[
+  { "id": "gv-001", "type": "guru_vs_siswa", "question": "Mana yang mengandung karbohidrat?", "options": [{ "id": "a", "label": "Nasi" }, { "id": "b", "label": "Air putih" }], "answer": "a", "explanation": "Nasi sumber karbohidrat, air tidak mengandung energi.", "points": 200, "level": 1 },
+  { "id": "gv-002", "type": "guru_vs_siswa", "question": "Mana yang merupakan sumber protein?", "options": [{ "id": "a", "label": "Tempe" }, { "id": "b", "label": "Permen" }], "answer": "a", "explanation": "Tempe kaya protein nabati, permen hanya gula.", "points": 200, "level": 2 },
+  { "id": "gv-003", "type": "guru_vs_siswa", "question": "Mana yang mengandung paling banyak gula?", "options": [{ "id": "a", "label": "Minuman bersoda" }, { "id": "b", "label": "Air putih" }], "answer": "a", "explanation": "Satu kaleng bersoda bisa mengandung 35 gram gula atau lebih.", "points": 200, "level": 3 },
+  { "id": "gv-004", "type": "guru_vs_siswa", "question": "Lauk mana yang termasuk protein nabati?", "options": [{ "id": "a", "label": "Tempe" }, { "id": "b", "label": "Ayam goreng" }], "answer": "a", "explanation": "Tempe dari kedelai, protein nabati. Ayam protein hewani.", "points": 200, "level": 4 },
+  { "id": "gv-005", "type": "guru_vs_siswa", "question": "Jebakan! Mana yang lebih sehat?", "options": [{ "id": "a", "label": "Jus buah kemasan" }, { "id": "b", "label": "Buah potong segar" }], "answer": "b", "explanation": "Buah potong seratnya utuh dan tanpa gula tambahan.", "points": 200, "level": 5 }
+]
