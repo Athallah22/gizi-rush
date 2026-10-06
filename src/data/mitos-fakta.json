@@ -1,12 +1,92 @@
 [
-  { "id": "mf-001", "type": "mitos_fakta", "question": "Sarapan dapat membantu memenuhi kebutuhan energi untuk memulai aktivitas.", "answer": "fakta", "explanation": "Sarapan bisa jadi kesempatan memenuhi kebutuhan energi dan zat gizi sebelum aktivitas.", "points": 100, "level": 1 },
-  { "id": "mf-006", "type": "mitos_fakta", "question": "Nasi bikin gemuk sehingga harus dihindari sama sekali.", "answer": "mitos", "explanation": "Nasi adalah sumber energi utama. Yang penting porsinya sesuai kebutuhan, bukan dihindari total.", "points": 100, "level": 1 },
-  { "id": "mf-002", "type": "mitos_fakta", "question": "Minum air putih yang banyak bisa menggantikan kebutuhan makan.", "answer": "mitos", "explanation": "Air penting, tapi tidak menggantikan energi dan zat gizi dari makanan.", "points": 100, "level": 2 },
-  { "id": "mf-007", "type": "mitos_fakta", "question": "Susu dapat membantu memenuhi kebutuhan kalsium untuk tulang.", "answer": "fakta", "explanation": "Susu mengandung kalsium dan protein yang membantu pertumbuhan tulang anak usia sekolah.", "points": 100, "level": 2 },
-  { "id": "mf-003", "type": "mitos_fakta", "question": "Semua makanan kemasan yang manis aman diminum setiap hari tanpa batas.", "answer": "mitos", "explanation": "Perhatikan kandungan gula dan frekuensi konsumsinya.", "points": 100, "level": 3 },
-  { "id": "mf-008", "type": "mitos_fakta", "question": "Gorengan boleh dimakan setiap hari asal masih hangat.", "answer": "mitos", "explanation": "Gorengan tinggi minyak dan lemak. Kelebihan lemak setiap hari berisiko bagi kesehatan.", "points": 100, "level": 3 },
-  { "id": "mf-004", "type": "mitos_fakta", "question": "Melewatkan makan malam pasti bikin kurus dan selalu sehat.", "answer": "mitos", "explanation": "Yang penting total porsi dan pilihan makanan seharian, bukan melewatkan makan.", "points": 100, "level": 4 },
-  { "id": "mf-009", "type": "mitos_fakta", "question": "Vitamin C hanya ada di buah jeruk.", "answer": "mitos", "explanation": "Vitamin C juga banyak di jambu biji, mangga, pepaya, dan sayuran seperti brokoli.", "points": 100, "level": 4 },
-  { "id": "mf-005", "type": "mitos_fakta", "question": "Buah dan sayur perlu dimakan setiap hari karena mengandung vitamin dan serat.", "answer": "fakta", "explanation": "Vitamin dan serat dari buah-sayur membantu tubuh tetap sehat.", "points": 100, "level": 5 },
-  { "id": "mf-010", "type": "mitos_fakta", "question": "Membaca label kemasan membantu memilih makanan yang lebih bijak.", "answer": "fakta", "explanation": "Label menunjukkan kandungan gula, garam, dan lemak sehingga bisa dibandingkan sebelum membeli.", "points": 100, "level": 5 }
+  {
+    "id": "mf-001",
+    "type": "mitos_fakta",
+    "question": "Sarapan dapat membantu memenuhi kebutuhan energi untuk memulai aktivitas.",
+    "answer": "fakta",
+    "explanation": "Sarapan bisa jadi kesempatan memenuhi kebutuhan energi dan zat gizi sebelum aktivitas.",
+    "points": 100,
+    "level": 1
+  },
+  {
+    "id": "mf-006",
+    "type": "mitos_fakta",
+    "question": "Nasi bikin gemuk sehingga harus dihindari sama sekali.",
+    "answer": "mitos",
+    "explanation": "Nasi adalah sumber energi utama. Yang penting porsinya sesuai kebutuhan, bukan dihindari total.",
+    "points": 100,
+    "level": 1
+  },
+  {
+    "id": "mf-002",
+    "type": "mitos_fakta",
+    "question": "Minum air putih yang banyak bisa menggantikan kebutuhan makan.",
+    "answer": "mitos",
+    "explanation": "Air penting, tapi tidak menggantikan energi dan zat gizi dari makanan.",
+    "points": 100,
+    "level": 2
+  },
+  {
+    "id": "mf-007",
+    "type": "mitos_fakta",
+    "question": "Susu dapat membantu memenuhi kebutuhan kalsium untuk tulang.",
+    "answer": "fakta",
+      "explanation": "Susu mengandung kalsium dan protein yang membantu menjaga tulang tetap sehat.",
+    "points": 100,
+    "level": 2
+  },
+  {
+    "id": "mf-003",
+    "type": "mitos_fakta",
+    "question": "Semua makanan kemasan yang manis aman diminum setiap hari tanpa batas.",
+    "answer": "mitos",
+    "explanation": "Perhatikan kandungan gula dan frekuensi konsumsinya.",
+    "points": 100,
+    "level": 3
+  },
+  {
+    "id": "mf-008",
+    "type": "mitos_fakta",
+    "question": "Gorengan boleh dimakan setiap hari asal masih hangat.",
+    "answer": "mitos",
+    "explanation": "Gorengan tinggi minyak dan lemak. Kelebihan lemak setiap hari berisiko bagi kesehatan.",
+    "points": 100,
+    "level": 3
+  },
+  {
+    "id": "mf-004",
+    "type": "mitos_fakta",
+    "question": "Melewatkan makan malam pasti bikin kurus dan selalu sehat.",
+    "answer": "mitos",
+    "explanation": "Yang penting total porsi dan pilihan makanan seharian, bukan melewatkan makan.",
+    "points": 100,
+    "level": 4
+  },
+  {
+    "id": "mf-009",
+    "type": "mitos_fakta",
+    "question": "Vitamin C hanya ada di buah jeruk.",
+    "answer": "mitos",
+    "explanation": "Vitamin C juga banyak di jambu biji, mangga, pepaya, dan sayuran seperti brokoli.",
+    "points": 100,
+    "level": 4
+  },
+  {
+    "id": "mf-005",
+    "type": "mitos_fakta",
+    "question": "Buah dan sayur perlu dimakan setiap hari karena mengandung vitamin dan serat.",
+    "answer": "fakta",
+    "explanation": "Vitamin dan serat dari buah-sayur membantu tubuh tetap sehat.",
+    "points": 100,
+    "level": 5
+  },
+  {
+    "id": "mf-010",
+    "type": "mitos_fakta",
+    "question": "Membaca label kemasan membantu memilih makanan yang lebih bijak.",
+    "answer": "fakta",
+    "explanation": "Label menunjukkan kandungan gula, garam, dan lemak sehingga bisa dibandingkan sebelum membeli.",
+    "points": 100,
+    "level": 5
+  }
 ]

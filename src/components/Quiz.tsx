@@ -1,8 +1,21 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { Question, Team } from "../types/game";
 import { sfx } from "../utils/sound";
 import { useAwardKeys } from "../utils/useAwardKeys";
 import TeamPicker from "./TeamPicker";
+
+function shuffledOptions(q: Question) {
+  if (!q.options || q.options.length === 0) return [];
+  let h = 2166136261;
+  for (const ch of q.id) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const arr = [...q.options];
+  for (let i = arr.length - 1; i > 0; i--) {
+    h = Math.imul(h ^ (h >>> 13), 16777619);
+    const j = Math.abs(h) % (i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 export default function Quiz({ title, q, reveal, onReveal, onToggle, teams, onScoreMany, canUndo, onUndo }: {
   title: string;
@@ -31,6 +44,8 @@ export default function Quiz({ title, q, reveal, onReveal, onToggle, teams, onSc
     setTimeout(() => setFloat(0), 1100);
   };
 
+  const opts = useMemo(() => shuffledOptions(q), [q]);
+
   useAwardKeys({ active: reveal, teams, onToggle: toggle, onAward: award });
 
   const doReveal = () => {
@@ -47,9 +62,9 @@ export default function Quiz({ title, q, reveal, onReveal, onToggle, teams, onSc
     <div className="mx-auto max-w-4xl space-y-4 text-center">
       <h2 className="title-glow text-5xl font-black text-yellow-300 drop-shadow">{title}</h2>
       <p className="card-stage animate-pop rounded-3xl p-8 text-4xl font-bold">{q.question}</p>
-      {q.options && (
+      {opts.length > 0 && (
         <div className="flex justify-center gap-4">
-          {q.options.map((o) => (
+          {opts.map((o) => (
             <div key={o.id} className="card-stage animate-slide-in rounded-2xl px-8 py-4 text-2xl font-bold">{o.label}</div>
           ))}
         </div>

@@ -40,6 +40,9 @@ export type Food = {
   label: string;
   category: FoodCategory;
   image: string;
+  aliases?: string[];
+  porsi_g?: number;
+  catatan_gizi?: string;
   gizi: Gizi;
 };
 

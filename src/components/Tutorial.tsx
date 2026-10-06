@@ -1,12 +1,18 @@
 import { useState } from "react";
 
 const STEPS: { title: string; body: string }[] = [
-  { title: "👋 Selamat datang di Gizi Rush!", body: "Game show gizi untuk SMP: 1 laptop + proyektor, kelompok berdiskusi dan menjawab bersama. Kamu sebagai fasilitator memegang semua kontrol." },
-  { title: "🎮 Menu sesi berurutan", body: "Ada 5 sesi yang terbuka berurutan. Setiap kartu menunjukkan bintang ⭐ dan progres level. Selesaikan satu sesi untuk membuka berikutnya." },
-  { title: "📶 Tiap sesi 5 level", body: "Setiap sesi punya Level 1–5. Selesai = jawaban sudah di-reveal agar materi tersampaikan. Keluar pakai Space aman: kembali ke sesi yang sama otomatis lanjut dari level terakhir." },
-  { title: "💥 Reveal + skor sekali klik", body: "Tekan R untuk tampil/sembunyikan jawaban. Tap chips tim yang benar (atau Semua), lalu 1 klik +Skor. Ada Undo bila salah pencet." },
-  { title: "🍱 Susun Piring spesial", body: "Drag makanan ke piring: skor live 0–250 dari kecocokan gizi (kalori, protein, serat, gula, lemak). Bintang naik otomatis saat piring ✅." },
-  { title: "⌨️ Kontrol cepat", body: "→/← pindah soal, R reveal, Tab board, Space menu, S kasih skor, 1–6 pilih tim, M mute, Esc reset. Tekan ? kapan saja untuk bantuan." },
+  { title: "👋 Selamat datang di Gizi Rush!", 
+    body: "Game show gizi: kelompok berdiskusi dan menjawab bersama. Kamu sebagai fasilitator memegang semua kontrol." },
+  { title: "🎮 Menu sesi berurutan", 
+    body: "Ada 5 sesi yang terbuka berurutan. Setiap kartu menunjukkan bintang ⭐ dan progres level. Selesaikan satu sesi untuk membuka berikutnya." },
+  { title: "📶 Tiap sesi 5 level", 
+    body: "Setiap sesi punya Level 1–5. Selesai = jawaban sudah di-reveal agar materi tersampaikan. Keluar pakai Space aman: kembali ke sesi yang sama otomatis lanjut dari level terakhir." },
+  { title: "💥 Reveal + skor sekali klik", 
+    body: "Tekan R untuk tampil/sembunyikan jawaban. Tap chips tim yang benar (atau Semua), lalu 1 klik +Skor. Ada Undo bila salah pencet." },
+  { title: "🍱 Susun Piring spesial", 
+    body: "Drag makanan ke piring: skor live 0–250 dari kecocokan gizi (kalori, protein, serat, gula, lemak). Bintang naik otomatis saat piring ✅." },
+  { title: "⌨️ Kontrol cepat", 
+    body: "→/← pindah soal, R reveal, Tab board, Space menu, S kasih skor, 1–6 pilih tim, M mute, Esc reset. Tekan H kapan saja untuk bantuan." },
 ];
 
 export default function Tutorial({ onClose }: { onClose: () => void }) {

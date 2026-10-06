@@ -7,7 +7,7 @@
 | Nama Produk | Gizi Rush |
 | Jenis | Interactive Educational Web Game |
 | Tema | Edukasi Gizi |
-| Target Utama | Siswa SMP |
+| Target Utama | Pelajar (edukasi gizi umum) |
 | Target Sekunder | Guru |
 | Operator | Ahli Gizi / Fasilitator |
 | Perangkat | 1 Laptop |
@@ -22,7 +22,7 @@
 
 # 2. Latar Belakang
 
-Edukasi gizi kepada siswa SMP sering disampaikan dalam bentuk presentasi atau penyuluhan satu arah. Metode tersebut dapat membuat peserta kurang aktif dan sulit mempertahankan perhatian.
+Edukasi gizi kepada pelajar sering disampaikan dalam bentuk presentasi atau penyuluhan satu arah. Metode tersebut dapat membuat peserta kurang aktif dan sulit mempertahankan perhatian.
 
 Gizi Rush dirancang sebagai permainan edukatif yang menjadikan sesi edukasi gizi lebih interaktif.
 
@@ -52,7 +52,7 @@ Membuat media edukasi gizi yang:
 1. interaktif;
 2. mudah dimainkan dalam kelompok;
 3. dapat dijalankan oleh satu fasilitator;
-4. menarik untuk siswa SMP;
+4. menarik untuk pelajar;
 5. tetap memiliki nilai edukasi;
 6. dapat dimainkan tanpa perangkat siswa;
 7. dapat digunakan menggunakan proyektor.
@@ -95,11 +95,11 @@ Permainan harus terasa seperti acara kuis di depan kelas, bukan seperti aplikasi
 
 # 5. Target Pengguna
 
-## 5.1 Siswa
+## 5.1 Pelajar
 
 Karakteristik:
 
-- siswa SMP;
+- pelajar (game gizi umum, tanpa jenjang sekolah);
 - bermain dalam kelompok;
 - melihat layar proyektor;
 - tidak menggunakan perangkat pribadi;

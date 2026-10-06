@@ -1,12 +1,192 @@
 [
-  { "id": "fb-001", "type": "food_battle", "question": "Mana yang perlu lebih diperhatikan konsumsinya jika diminum setiap hari?", "options": [{ "id": "a", "label": "Minuman manis" }, { "id": "b", "label": "Susu plain" }], "answer": "a", "explanation": "Perhatikan kandungan gula dan frekuensi konsumsi minuman manis.", "points": 150, "level": 1 },
-  { "id": "fb-006", "type": "food_battle", "question": "Lauk mana yang lebih baik untuk makan siang?", "options": [{ "id": "a", "label": "Ayam goreng tepung" }, { "id": "b", "label": "Tempe bacem" }], "answer": "b", "explanation": "Tempe bacem lebih rendah minyak dibanding ayam goreng tepung, protein nabatinya tetap tinggi.", "points": 150, "level": 1 },
-  { "id": "fb-002", "type": "food_battle", "question": "Bekal mana yang lebih lengkap untuk sekolah?", "options": [{ "id": "a", "label": "Gorengan saja" }, { "id": "b", "label": "Nasi + telur + sayur" }], "answer": "b", "explanation": "Bekal lengkap ada pokok, lauk, dan sayur.", "points": 150, "level": 2 },
-  { "id": "fb-007", "type": "food_battle", "question": "Makanan pokok mana yang lebih berserat?", "options": [{ "id": "a", "label": "Ubi rebus" }, { "id": "b", "label": "Kerupuk" }], "answer": "a", "explanation": "Ubi mengandung serat dan karbohidrat kompleks, kerupuk hanya tepung dan minyak.", "points": 150, "level": 2 },
-  { "id": "fb-003", "type": "food_battle", "question": "Camilan sore mana yang lebih bijak?", "options": [{ "id": "a", "label": "Buah potong" }, { "id": "b", "label": "Kerupuk + minuman bersoda" }], "answer": "a", "explanation": "Buah mengandung vitamin dan serat, rendah gula tambahan.", "points": 150, "level": 3 },
-  { "id": "fb-008", "type": "food_battle", "question": "Jajanan mana yang lebih bersahabat untuk gigi?", "options": [{ "id": "a", "label": "Permen lengket" }, { "id": "b", "label": "Kacang rebus" }], "answer": "b", "explanation": "Permen lengket menempel di gigi dan tinggi gula, kacang rebus mengandung protein dan lemak baik.", "points": 150, "level": 3 },
-  { "id": "fb-004", "type": "food_battle", "question": "Minuman apa yang paling baik diminum setiap hari?", "options": [{ "id": "a", "label": "Air putih" }, { "id": "b", "label": "Minuman bersoda" }], "answer": "a", "explanation": "Air putih tanpa gula, aman diminum setiap hari.", "points": 150, "level": 4 },
-  { "id": "fb-009", "type": "food_battle", "question": "Sarapan berkuah mana yang lebih ringan minyaknya?", "options": [{ "id": "a", "label": "Soto ayam bening" }, { "id": "b", "label": "Mie instan double + kornet" }], "answer": "a", "explanation": "Soto bening lebih rendah lemak dan ada sayurnya, mie instan double tinggi garam dan lemak.", "points": 150, "level": 4 },
-  { "id": "fb-005", "type": "food_battle", "question": "Sarapan mana yang lebih lengkap?", "options": [{ "id": "a", "label": "Nasi + telur + sayur" }, { "id": "b", "label": "Minuman manis saja" }], "answer": "a", "explanation": "Sarapan lengkap memberi energi dan zat gizi untuk aktivitas.", "points": 150, "level": 5 },
-  { "id": "fb-010", "type": "food_battle", "question": "Menu makan malam mana yang lebih seimbang?", "options": [{ "id": "a", "label": "Nasi + ikan + sayur + buah" }, { "id": "b", "label": "Nasi + kerupuk + minuman bersoda" }], "answer": "a", "explanation": "Menu pertama lengkap empat sehat: pokok, lauk hewani, sayur, dan buah.", "points": 150, "level": 5 }
+  {
+    "id": "fb-001",
+    "type": "food_battle",
+    "question": "Mana yang perlu lebih diperhatikan konsumsinya jika diminum setiap hari?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Minuman manis"
+      },
+      {
+        "id": "b",
+        "label": "Susu plain"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Perhatikan kandungan gula dan frekuensi konsumsi minuman manis.",
+    "points": 150,
+    "level": 1
+  },
+  {
+    "id": "fb-006",
+    "type": "food_battle",
+    "question": "Lauk mana yang lebih baik untuk makan siang?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ayam goreng tepung"
+      },
+      {
+        "id": "b",
+        "label": "Tempe bacem"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tempe bacem lebih rendah minyak dibanding ayam goreng tepung, protein nabatinya tetap tinggi.",
+    "points": 150,
+    "level": 1
+  },
+  {
+    "id": "fb-002",
+    "type": "food_battle",
+    "question": "Bekal mana yang lebih lengkap untuk sekolah?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Gorengan saja"
+      },
+      {
+        "id": "b",
+        "label": "Nasi + telur + sayur"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Bekal lengkap ada pokok, lauk, dan sayur.",
+    "points": 150,
+    "level": 2
+  },
+  {
+    "id": "fb-007",
+    "type": "food_battle",
+    "question": "Makanan pokok mana yang lebih berserat?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ubi rebus"
+      },
+      {
+        "id": "b",
+        "label": "Kerupuk"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ubi mengandung serat dan karbohidrat kompleks, kerupuk hanya tepung dan minyak.",
+    "points": 150,
+    "level": 2
+  },
+  {
+    "id": "fb-003",
+    "type": "food_battle",
+    "question": "Camilan sore mana yang lebih bijak?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buah potong"
+      },
+      {
+        "id": "b",
+        "label": "Kerupuk + minuman bersoda"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Buah mengandung vitamin dan serat, rendah gula tambahan.",
+    "points": 150,
+    "level": 3
+  },
+  {
+    "id": "fb-008",
+    "type": "food_battle",
+    "question": "Jajanan mana yang lebih bersahabat untuk gigi?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Permen lengket"
+      },
+      {
+        "id": "b",
+        "label": "Kacang rebus"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Permen lengket menempel di gigi dan tinggi gula, kacang rebus mengandung protein dan lemak baik.",
+    "points": 150,
+    "level": 3
+  },
+  {
+    "id": "fb-004",
+    "type": "food_battle",
+    "question": "Minuman apa yang paling baik diminum setiap hari?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Air putih"
+      },
+      {
+        "id": "b",
+        "label": "Minuman bersoda"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Air putih tanpa gula, aman diminum setiap hari.",
+    "points": 150,
+    "level": 4
+  },
+  {
+    "id": "fb-009",
+    "type": "food_battle",
+    "question": "Sarapan berkuah mana yang lebih ringan minyaknya?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Soto ayam bening"
+      },
+      {
+        "id": "b",
+        "label": "Mie instan double + kornet"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Soto bening lebih rendah lemak dan ada sayurnya, mie instan double tinggi garam dan lemak.",
+    "points": 150,
+    "level": 4
+  },
+  {
+    "id": "fb-005",
+    "type": "food_battle",
+    "question": "Sarapan mana yang lebih lengkap?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Nasi + telur + sayur"
+      },
+      {
+        "id": "b",
+        "label": "Minuman manis saja"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sarapan lengkap memberi energi dan zat gizi untuk aktivitas.",
+    "points": 150,
+    "level": 5
+  },
+  {
+    "id": "fb-010",
+    "type": "food_battle",
+    "question": "Menu makan malam mana yang lebih seimbang?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Nasi + ikan + sayur + buah"
+      },
+      {
+        "id": "b",
+        "label": "Nasi + kerupuk + minuman bersoda"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Menu pertama lengkap empat sehat: pokok, lauk hewani, sayur, dan buah.",
+    "points": 150,
+    "level": 5
+  }
 ]

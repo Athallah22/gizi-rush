@@ -1,12 +1,192 @@
 [
-  { "id": "f-001", "type": "final", "question": "Kelompok mana yang sudah 4 Sehat 5 Sempurna?", "options": [{ "id": "a", "label": "Nasi + ayam + sayur + apel + susu" }, { "id": "b", "label": "Nasi + ayam saja" }], "answer": "a", "explanation": "Lengkap: pokok, lauk, sayur, buah, plus susu penyempurna.", "points": 500, "level": 1 },
-  { "id": "f-006", "type": "final", "question": "Kebiasaan mana yang paling membantu energi belajar?", "options": [{ "id": "a", "label": "Sarapan lengkap tiap pagi" }, { "id": "b", "label": "Begadang + minuman bersoda" }], "answer": "a", "explanation": "Sarapan memberi bahan bakar otak, begadang plus soda justru bikin cepat lelah.", "points": 500, "level": 1 },
-  { "id": "f-002", "type": "final", "question": "Minuman bersoda setiap hari berisiko karena...", "options": [{ "id": "a", "label": "Gula sangat tinggi" }, { "id": "b", "label": "Rasanya dingin" }], "answer": "a", "explanation": "Gula berlebih berisiko untuk kesehatan jika tiap hari.", "points": 500, "level": 2 },
-  { "id": "f-007", "type": "final", "question": "Protein hewani mana yang lebih rendah lemak?", "options": [{ "id": "a", "label": "Ikan kukus" }, { "id": "b", "label": "Ayam goreng tepung" }], "answer": "a", "explanation": "Ikan kukus tanpa minyak tambahan, ayam goreng tepung menyerap banyak minyak.", "points": 500, "level": 2 },
-  { "id": "f-003", "type": "final", "question": "Kenapa serat dari sayur dan buah itu penting?", "options": [{ "id": "a", "label": "Membantu pencernaan" }, { "id": "b", "label": "Bikin cepat haus" }], "answer": "a", "explanation": "Serat membantu pencernaan dan bikin kenyang lebih lama.", "points": 500, "level": 3 },
-  { "id": "f-008", "type": "final", "question": "Camilan mana yang mengandung protein dan kalsium?", "options": [{ "id": "a", "label": "Yoghurt plain + buah" }, { "id": "b", "label": "Permen + minuman bersoda" }], "answer": "a", "explanation": "Yoghurt mengandung protein dan kalsium, buah menambah vitamin dan serat.", "points": 500, "level": 3 },
-  { "id": "f-004", "type": "final", "question": "Porsi seimbang itu artinya...", "options": [{ "id": "a", "label": "Ada pokok + lauk + sayur + buah sesuai kebutuhan" }, { "id": "b", "label": "Makan sebanyak-banyaknya" }], "answer": "a", "explanation": "Seimbang = beragam, komposisi tepat, porsi sesuai kebutuhan.", "points": 500, "level": 4 },
-  { "id": "f-009", "type": "final", "question": "Cara bijak membaca label kemasan?", "options": [{ "id": "a", "label": "Bandingkan gula, garam, lemak antar produk" }, { "id": "b", "label": "Pilih yang gambarnya paling lucu" }], "answer": "a", "explanation": "Angka gizi di label lebih jujur daripada gambar kemasan.", "points": 500, "level": 4 },
-  { "id": "f-005", "type": "final", "question": "Ciri pola makan bijak untuk anak SMP?", "options": [{ "id": "a", "label": "Beragam + batasi gula, garam, lemak" }, { "id": "b", "label": "Jajan gorengan tiap hari" }], "answer": "a", "explanation": "Makan beragam dan bijak batasi GGL adalah kunci pola makan sehat.", "points": 500, "level": 5 },
-  { "id": "f-010", "type": "final", "question": "Rencana bekal seminggu yang paling bijak?", "options": [{ "id": "a", "label": "Ganti-ganti: nasi, ubi, roti + lauk + sayur + buah" }, { "id": "b", "label": "Gorengan + minuman manis tiap hari" }], "answer": "a", "explanation": "Variasi bahan memberi zat gizi beragam dan tidak membosankan.", "points": 500, "level": 5 }
+  {
+    "id": "f-001",
+    "type": "final",
+    "question": "Kelompok mana yang sudah 4 Sehat 5 Sempurna?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Nasi + ayam + sayur + apel + susu"
+      },
+      {
+        "id": "b",
+        "label": "Nasi + ayam saja"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Lengkap: pokok, lauk, sayur, buah, plus susu penyempurna.",
+    "points": 500,
+    "level": 1
+  },
+  {
+    "id": "f-006",
+    "type": "final",
+    "question": "Kebiasaan mana yang paling membantu energi belajar?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sarapan lengkap tiap pagi"
+      },
+      {
+        "id": "b",
+        "label": "Begadang + minuman bersoda"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sarapan memberi bahan bakar otak, begadang plus soda justru bikin cepat lelah.",
+    "points": 500,
+    "level": 1
+  },
+  {
+    "id": "f-002",
+    "type": "final",
+    "question": "Minuman bersoda setiap hari berisiko karena...",
+    "options": [
+      {
+        "id": "a",
+        "label": "Gula sangat tinggi"
+      },
+      {
+        "id": "b",
+        "label": "Rasanya dingin"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gula berlebih berisiko untuk kesehatan jika tiap hari.",
+    "points": 500,
+    "level": 2
+  },
+  {
+    "id": "f-007",
+    "type": "final",
+    "question": "Protein hewani mana yang lebih rendah lemak?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ikan kukus"
+      },
+      {
+        "id": "b",
+        "label": "Ayam goreng tepung"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ikan kukus tanpa minyak tambahan, ayam goreng tepung menyerap banyak minyak.",
+    "points": 500,
+    "level": 2
+  },
+  {
+    "id": "f-003",
+    "type": "final",
+    "question": "Kenapa serat dari sayur dan buah itu penting?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Membantu pencernaan"
+      },
+      {
+        "id": "b",
+        "label": "Bikin cepat haus"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Serat membantu pencernaan dan bikin kenyang lebih lama.",
+    "points": 500,
+    "level": 3
+  },
+  {
+    "id": "f-008",
+    "type": "final",
+    "question": "Camilan mana yang mengandung protein dan kalsium?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Yoghurt plain + buah"
+      },
+      {
+        "id": "b",
+        "label": "Permen + minuman bersoda"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Yoghurt mengandung protein dan kalsium, buah menambah vitamin dan serat.",
+    "points": 500,
+    "level": 3
+  },
+  {
+    "id": "f-004",
+    "type": "final",
+    "question": "Porsi seimbang itu artinya...",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ada pokok + lauk + sayur + buah sesuai kebutuhan"
+      },
+      {
+        "id": "b",
+        "label": "Makan sebanyak-banyaknya"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Seimbang = beragam, komposisi tepat, porsi sesuai kebutuhan.",
+    "points": 500,
+    "level": 4
+  },
+  {
+    "id": "f-009",
+    "type": "final",
+    "question": "Cara bijak membaca label kemasan?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Bandingkan gula, garam, lemak antar produk"
+      },
+      {
+        "id": "b",
+        "label": "Pilih yang gambarnya paling lucu"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Angka gizi di label lebih jujur daripada gambar kemasan.",
+    "points": 500,
+    "level": 4
+  },
+  {
+    "id": "f-005",
+    "type": "final",
+      "question": "Ciri pola makan yang bijak?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Beragam + batasi gula, garam, lemak"
+      },
+      {
+        "id": "b",
+        "label": "Jajan gorengan tiap hari"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Makan beragam dan bijak batasi GGL adalah kunci pola makan sehat.",
+    "points": 500,
+    "level": 5
+  },
+  {
+    "id": "f-010",
+    "type": "final",
+    "question": "Rencana bekal seminggu yang paling bijak?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ganti-ganti: nasi, ubi, roti + lauk + sayur + buah"
+      },
+      {
+        "id": "b",
+        "label": "Gorengan + minuman manis tiap hari"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Variasi bahan memberi zat gizi beragam dan tidak membosankan.",
+    "points": 500,
+    "level": 5
+  }
 ]

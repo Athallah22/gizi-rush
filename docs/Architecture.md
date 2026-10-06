@@ -227,7 +227,9 @@ gizi-rush/
 │   │   ├── TeamPicker/ (chips multi-tim + award + undo)
 │   │   ├── SessionMenu/ (layout 3-2-1 + badge Lanjut)
 │   │   ├── ControlsHelp/ (overlay semua kontrol, ?/H)
-│   │   └── Tutorial/ (6 langkah, flag gizi-rush-seen-tutorial)
+│   │   ├── Tutorial/ (6 langkah, flag gizi-rush-seen-tutorial)
+│   │   └── AiCoach/ (panel Tanya Ahli, lock saat soal aktif)
+│   │
 │   │
 │   ├── features/
 │   │   └── game/
@@ -255,7 +257,23 @@ gizi-rush/
 │   │
 │   ├── utils/
 │   │   ├── sound.ts (synth WebAudio lokal)
-│   │   └── useAwardKeys.ts (keyboard 1-6 + S)
+│   │   ├── useAwardKeys.ts (keyboard 1-6 + S)
+│   │   └── aiClient.ts (fetch /api/* + fallback offline)
+│   │
+│   ├── api/ (Vercel Functions, AI Gateway)
+│   │   ├── health.ts, ask.ts, saran.ts
+│   │
+│   ├── rag/
+│   │   ├── corpus.ts (±72 chunk dari src/data)
+│   │   ├── retrieve.ts (TfidfRetriever)
+│   │   ├── prompt.ts (coach + plate + guardrail)
+│   │   ├── providers.ts (Gemini/Groq/OpenRouter)
+│   │   ├── cache.ts, validate.ts, service.ts
+│   │
+│   ├── knowledge/ (chunks.json, generated)
+│   ├── eval/ (golden.json 20 Q/A)
+│   ├── scripts/ (build-knowledge.ts, eval-rag.ts)
+│   ├── .env.example
 │   │
 │   ├── App.tsx
 │   ├── main.tsx
@@ -433,7 +451,9 @@ Online image
 
 untuk fitur inti.
 
-Deploy Vercel sebagai static (`vite build`) tetap offline: semua JS/CSS/images/sounds/questions di-bundle lokal, nol Google Fonts/API/CDN. `localStorage` (`+ plate`) untuk resume, ditambah Reset anti-crash (tanpa Export).
+Deploy Vercel sebagai static (`vite build`) tetap offline: semua JS/CSS/images/sounds/questions di-bundle lokal, nol Google Fonts/API/CDN. `localStorage` untuk resume, ditambah Reset anti-crash (tanpa Export).
+
+AI opsional via Vercel Functions (`/api/*` + `_guard.ts` origin/rate-limit, detail `docs/AI.md`): game 100% jalan tanpa AI; badge `🤖 AI` / `AI off` + panel `🥗 Tanya Ahli` (lock saat soal aktif) + saran piring otomatis `✅` + manual saat gagal. Metrik retrieval: top1 14/20, top4 20/20 + sapaan 2/2 + noground 1/1 (`npm run eval:rag`); sumber materi disembunyikan di bawah ambang 0.08. PWA aktif (offline pasca-muat pertama); `/api/health` timeout klien 2 dtk.
 
 ---
 

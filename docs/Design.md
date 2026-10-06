@@ -208,8 +208,10 @@ Yang terlihat jelas:
 Kontrol fasilitator berupa dock `fixed bottom-0` kompak agar konten game penuh di layar:
 
 ```text
-[⬅️ Misi/Soal (←)] [💥 Reveal (R)] [(→) Misi/Soal] [🏆 Board (Tab)] [🏠 Menu (Space)] [Reset (Esc)] [?]
+[⬅️ Misi/Soal (←)] [💥 Reveal (R)] [(→) Misi/Soal] [🏆 Board (Tab)] [🏠 Menu (Space)] [Reset (Esc)] [?] [🥗]
 ```
+
+Tombol `🥗` membuka panel Tanya Ahli (Nutrisi Coach RAG, badge `🤖 AI` bila aktif); saran AI piring 1 kalimat muncul otomatis saat misi `✅`. Tanpa AI pun game 100% jalan.
 
 R = toggle reveal ↔ hide, Tab = toggle board. Header menampilkan `Level x/5` + tombol `?` semua kontrol. Picker skor: chips multi-tim + `Semua` + 1 tombol award + Undo. `Esc` = Reset game (tanpa confirm; tutup help/board/pending dulu bila terbuka).
 

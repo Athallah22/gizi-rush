@@ -44,6 +44,7 @@ export default function SusunPiring({ level, plate, onPlate, teams, onScoreMany,
       onDone(mission.level);
       sfx.correct();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [complete, mission.level, onDone]);
 
   const toggle = (id: string) => setPicked((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
