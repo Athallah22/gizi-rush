@@ -66,8 +66,6 @@ Konfigurasi `.env`: **tidak diperlukan** — proyek ini tanpa backend, tanpa API
 | `npm run preview` | Menjalankan pratinjau hasil `build` secara lokal |
 | `npm run lint` | Menjalankan Oxlint |
 | `node --experimental-strip-types src/features/game/scoring.check.ts` | Mengecek kebenaran rubrik skor piring |
-| `npm run knowledge` | Membangun `knowledge/chunks.json` (±72 chunk dari `src/data/`) |
-| `npm run eval:rag` | Evaluasi retrieval (top1/top4 + guardrail) |
 
 ## 🗂️ Struktur Folder
 
@@ -83,18 +81,13 @@ Gizi-Game/
 │   ├── rounds/SusunPiring/       # SusunPiring.tsx, Plate.tsx, DraggableFood.tsx
 │   ├── features/game/            # useGame.ts, sessions.ts, quizPool.ts, scoring.ts, scoring.check.ts
 │   ├── data/                     # 4× kuis 10 soal, susun-piring.json (27 makanan + 5 misi + target gizi)
-│   ├── utils/                    # sound.ts (synth WebAudio), useAwardKeys.ts, aiClient.ts
+│   ├── utils/                    # sound.ts (synth WebAudio), useAwardKeys.ts
 │   ├── types/game.ts
 │   ├── App.tsx                   # setup → menu sesi → main → result
 │   ├── main.tsx
 │   └── index.css                 # tema game-show + keyframes animasi
-├── api/                          # Vercel Functions: health.ts, ask.ts, saran.ts
-├── rag/                          # corpus, retrieve (TF-IDF), prompt, providers, cache, validate, service
-├── knowledge/                    # chunks.json (generated, jangan tulis manual)
-├── eval/                         # golden.json + eval-rag.ts
 ├── scripts/                      # build-knowledge.ts, eval-rag.ts
-├── .env.example                  # AI_GATEWAY + provider + key (tanpa secret)
-├── docs/                         # PRD.md, Design.md, Architecture.md, AI.md
+├── docs/                         # PRD.md, Design.md, Architecture.md
 ├── package.json
 └── README.md
 ```
@@ -132,33 +125,6 @@ Kelengkapan 100 + Kalori 50 + Protein 30 + Serat 20 + Gula 30 + Lemak 20
 ```
 
 Makanan `junk` menghukum otomatis lewat gula/lemak/kalori yang jebol + flag `⚠️`. Tiap misi punya target sendiri (L1–L4 empat sehat, L5 4 Sehat 5 Sempurna + susu).
-
-## 🔒 Keamanan
-
-- Game inti tanpa backend, tanpa akun, tanpa data pribadi — tidak ada PII di `src/data/`.
-- Seluruh aset game lokal, tanpa CDN.
-- Input nama kelompok (max 24) dan pertanyaan AI (max 300) dirender sebagai JSX text (auto-escape, anti-XSS).
-- API key LLM hanya di Vercel env (server) — tak pernah ke browser; frontend hanya panggil `/api/*`.
-- `dist/`, `node_modules/`, `.env*` ter-cover `.gitignore` (kecuali `.env.example`) — jangan commit ketiganya.
-
-## 🤖 AI (detail: `docs/AI.md`)
-
-- Nutrisi Coach: panel `🥗 Tanya Ahli` (badge `🤖 AI` / `AI off`), RAG top-4 chunk + jawaban ber-sumber; bila tak ada di materi, jawab jujur + dilengkapi hasil web Gemini ber-link (`📚 Materi game` vs `🌐 Web`), fallback offline bila API mati/limit.
-- Evaluator Piring: 1 kalimat saran saat misi `✅` (skor tetap dari Game Engine).
-- Provider gratis: Gemini Flash default (gampang ganti via `LLM_PROVIDER`), cache SHA256 hemat kuota, `max_tokens` 400.
-- Tanpa secret = AI nonaktif tapi game 100% jalan. Isi key di Vercel env sesuai `.env.example`.
-
-Metrik retrieval saat ini (`npm run eval:rag`, 20 kasus + 1 guardrail + 1 web + 2 sapaan + 1 noground):
-
-```text
-retrieval top1: 20/20, top4: 20/20
-greeting cases: 2 (template lokal, tanpa LLM, tanpa sumber)
-noground cases: 1 (skor di bawah 0.08 → sumber materi disembunyikan)
-```
-
-Sumber materi hanya tampil bila skor chunk teratas di atas ambang relevansi 0.08; sapaan ("halo", "makasih", dsb) dijawab template lokal tanpa panggil LLM. Panel AI terkunci saat soal kuis aktif (anti bocor jawaban); saran piring tersedia otomatis saat `✅` dan manual saat gagal. `/api/*` dilindungi origin-check + rate-limit 20/menit; `/api/health` timeout 2 dtk; PWA aktif untuk offline pasca-muat pertama.
-
-3 miss korpus diatasi web grounding (lihat `docs/AI.md §22`); jalur naik permanen: tambah sinonim di chunk atau naik ke embedding (`§12`).
 
 ## 👥 Informasi Tambahan
 
