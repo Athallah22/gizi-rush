@@ -4,7 +4,7 @@ Game show edukasi gizi.
 
 ![Preview Gizi Rush](./public/UI.png)
 
-🔗 **Demo:** https://gizi-rush.vercel.app/
+**Demo:** https://gizi-rush.vercel.app/
 
 > Lokal: jalankan `npm run dev` lalu buka alamat yang tampil di terminal (default Vite `http://localhost:5173`).
 
@@ -20,10 +20,8 @@ Acuan desain: `docs/PRD.md`, `docs/Design.md`, `docs/Architecture.md`.
 - Countdown 3-2-1-GO setiap buka sesi, confetti juara, sound effect synth lokal + mute
 - Kontrol keyboard penuh untuk fasilitator (lihat [Kontrol](#-kontrol-fasilitator))
 - Leaderboard, progress tersimpan di `localStorage` (refresh tidak menghilangkan sesi)
-- 100% offline untuk game inti; AI (`🥗 Tanya Ahli` + saran piring) opsional via Vercel AI Gateway, game tetap jalan bila AI mati
-- 🤖 AI: Nutrisi Coach RAG (TF-IDF + Gemini/Groq/OpenRouter, cache + fallback + sumber kutipan) — detail di `docs/AI.md`
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Komponen | Teknologi |
 |---|---|
@@ -35,14 +33,14 @@ Acuan desain: `docs/PRD.md`, `docs/Design.md`, `docs/Architecture.md`.
 | Data | JSON lokal (`src/data/`) |
 | Penyimpanan | `localStorage` (tanpa backend) |
 
-## ✅ Prasyarat
+## Prasyarat
 
 - Node.js >= 20 (disarankan versi LTS terbaru; teruji di Node.js v22)
 - npm >= 10 (atau pnpm/yarn yang kompatibel)
 - Browser modern (Chrome/Edge/Firefox terbaru)
 - Untuk sesi kelas: 1 laptop + proyektor/layar besar
 
-## 🚀 Instalasi & Menjalankan Lokal
+## Instalasi & Menjalankan Lokal
 
 ```sh
 git clone <url-repo-anda>
@@ -57,7 +55,7 @@ Buka alamat lokal yang tampil di terminal (default `http://localhost:5173`).
 
 Konfigurasi `.env`: **tidak diperlukan** — proyek ini tanpa backend, tanpa API key, tanpa environment variable.
 
-## 📜 Daftar Skrip
+## Daftar Skrip
 
 | Perintah | Fungsi |
 |---|---|
@@ -67,7 +65,7 @@ Konfigurasi `.env`: **tidak diperlukan** — proyek ini tanpa backend, tanpa API
 | `npm run lint` | Menjalankan Oxlint |
 | `node --experimental-strip-types src/features/game/scoring.check.ts` | Mengecek kebenaran rubrik skor piring |
 
-## 🗂️ Struktur Folder
+## Struktur Folder
 
 ```text
 Gizi-Game/
@@ -92,7 +90,7 @@ Gizi-Game/
 └── README.md
 ```
 
-## 🎮 Alur Main
+## Alur Main
 
 ```text
 Setup (nama kelompok 2–6, bebas tambah/hapus)
@@ -103,7 +101,7 @@ Setup (nama kelompok 2–6, bebas tambah/hapus)
 
 Selesai per level = sudah reveal (agar momen edukasi tersampaikan). Bintang misi piring naik otomatis saat piring `✅` pertama; tombol skor tetap bisa dipakai untuk nilai parsial. Piring auto-kosong tiap ganti misi (skor tim aman).
 
-## ⌨️ Kontrol Fasilitator
+## Kontrol Fasilitator
 
 | Tombol | Fungsi |
 |---|---|
@@ -116,7 +114,7 @@ Selesai per level = sudah reveal (agar momen edukasi tersampaikan). Bintang misi
 | `M` | Mute |
 | `Esc` | Tutup board / batalkan countdown sesi |
 
-## 🧮 Rubrik Susun Piring (maks 250)
+## Rubrik Susun Piring (maks 250)
 
 Skor = kecocokan total gizi piring vs target misi, live saat drop, maks 6 item anti-spam:
 
@@ -126,7 +124,7 @@ Kelengkapan 100 + Kalori 50 + Protein 30 + Serat 20 + Gula 30 + Lemak 20
 
 Makanan `junk` menghukum otomatis lewat gula/lemak/kalori yang jebol + flag `⚠️`. Tiap misi punya target sendiri (L1–L4 empat sehat, L5 4 Sehat 5 Sempurna + susu).
 
-## 👥 Informasi Tambahan
+## Informasi Tambahan
 
 - Dikembangkan sebagai media edukasi gizi.
 - Dokumen perancangan lengkap: `docs/PRD.md` (kebutuhan produk), `docs/Design.md` (UI/UX), `docs/Architecture.md` (arsitektur). 
